@@ -43,13 +43,13 @@ public class SeleTest {
 
   @Parameters
   public static Collection<Object[]> getData() throws IOException {
-	         Object[][] obj = new Object[118][];
-	         CsvReader r = new CsvReader("E:\\16172\\ST\\lab\\inputgit.csv", ',',
+	         Object[][] obj = new Object[117][];
+	         CsvReader reader = new CsvReader("E:\\16172\\ST\\lab\\inputgit.csv", ',',
 	        		 Charset.forName("GBK"));
 	          int num = 0;
-	          r.readHeaders();
+	          reader.readHeaders();
 	          while(r.readRecord()){
-	              obj[num] = new Object[]{r.get(0), r.get(2)};
+	              obj[num] = new Object[]{reader.get(0), reader.get(2)};
 	              num++;
 	          }
 	          return Arrays.asList(obj);
