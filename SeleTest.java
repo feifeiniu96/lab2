@@ -48,7 +48,7 @@ public class SeleTest {
 	        		 Charset.forName("GBK"));
 	          int num = 0;
 	          reader.readHeaders();
-	          while(r.readRecord()){
+	          while(reader.readRecord()){
 	              obj[num] = new Object[]{reader.get(0), reader.get(2)};
 	              num++;
 	          }
